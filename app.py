@@ -70,6 +70,7 @@ class Main(Resource):
     def patch(self, main):    # patch is a HTTP method for update
         args = parser_update_args.parse_args()
         result = DbModel.query.filter_by(_id=main).first()
+        
         if not result:
             abort(404, message="Doesn't exist, Cannot Update")
         
