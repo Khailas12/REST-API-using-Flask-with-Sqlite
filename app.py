@@ -5,6 +5,7 @@ from flask_sqlalchemy import SQLAlchemy
 app = Flask(__name__)
 api = Api(app)
 
+
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
 db = SQLAlchemy(app)
 
@@ -16,6 +17,7 @@ class DbModel(db.Model):
     
     def __repr__(self):
         return f"Main(name={name}, age={age}, gender={gender})"
+
 
 # reqparse -> it parses arguments from an incoming request and uses them as inputs to invoke the corresponding controller method
 parser = reqparse.RequestParser()

@@ -2,8 +2,7 @@ import requests
 
 
 URL = "http://127.0.0.1:5000/"
-                        
-                        
+                                        
 # data = [
 #     {"name": "bruce", "age": 20, "gender": "male"},
 #     {"name": "martha", "age": 35, "gender": "female"},
@@ -21,4 +20,3 @@ print(get.json())
 
 patch = requests.patch(URL + "main/2", {"gender": "male"})  # updating values accordinly
 print(patch.json())
-
